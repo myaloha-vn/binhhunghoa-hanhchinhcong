@@ -1,0 +1,49 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Thủ tục hành chính | Phường Bình Hưng Hòa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></head>
+<body>
+<header class="mast"><div class="wrap">
+  <a class="logo" href="#"><img class="seal" src="/src/assets/logo.png" alt="Logo Phường Bình Hưng Hòa Xanh"><span class="brand"><strong>PHƯỜNG BÌNH HƯNG HÒA</strong><small>TRUNG TÂM HÀNH CHÍNH CÔNG</small></span></a>
+  <nav class="nav"><a href="#">Trang chủ</a><a href="#danh-sach" class="current">Thủ tục hành chính</a><a href="https://dichvucong.gov.vn/" target="_blank" rel="noopener">Dịch vụ công</a><a href="https://dichvucong.gov.vn/" target="_blank" rel="noopener">Tra cứu hồ sơ</a></nav>
+  <a class="btn ghost" href="https://dichvucong.gov.vn/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>Cổng DVC Quốc gia</a>
+</div></header>
+
+<section class="hero"><div class="wrap heroin">
+  <div class="herotext">
+    <h1>Tra cứu thủ tục hành chính<br><em>phường Bình Hưng Hoà</em></h1>
+    <p class="lead">Tìm đúng thủ tục, nắm rõ hồ sơ và cách thực hiện.</p>
+  </div>
+  <img class="bld" src="/src/assets/toa-nha.png" alt="Trung tâm Hành chính công phường Bình Hưng Hòa">
+  
+</div></section>
+
+<div class="wrap searchcard" id="tim-kiem">
+  <div class="searchrow"><label class="field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="heroSearch" type="search" placeholder="Bạn cần tìm thủ tục gì hôm nay?" aria-label="Tìm thủ tục"></label><button class="go" onclick="applyHeroSearch()">Tìm kiếm</button></div>
+  <div class="chips" id="chips"></div>
+</div>
+
+<main class="wrap list" id="danh-sach">
+  <div class="listtop">
+    <div class="ltitle"><h2 id="listTitle">Thủ tục phổ biến</h2><button class="link" id="viewAllBtn" onclick="showAll()">Xem toàn bộ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+    <div class="tools"><select id="categorySelect" aria-label="Lĩnh vực"><option value="all">Lĩnh vực</option></select><button class="iconbtn" id="sortBtn" onclick="toggleSort()" title="Sắp xếp A → Z" aria-label="Sắp xếp A → Z"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4v16M4 8l4-4 4 4M16 20V4M12 16l4 4 4-4"/></svg></button></div>
+  </div>
+  <div id="records" class="records"></div>
+  <div id="pager" class="pager"></div>
+</main>
+
+<footer class="foot" id="huongdan"><div class="wrap footgrid">
+  <div class="footbrand"><img src="/src/assets/logo.png" alt="Logo Phường Bình Hưng Hòa Xanh"></div>
+  <div class="footinfo">
+    <p><b>Cơ quan chủ quản:</b> PHƯỜNG BÌNH HƯNG HÒA</p>
+    <p><b>Đơn vị quản trị:</b> MyPortal.vn</p>
+    <p><b>Địa chỉ:</b> 621 Tân Kỳ Tân Quý, phường Bình Hưng Hòa, Thành phố Hồ Chí Minh</p>
+    <p><b>Điện thoại:</b></p>
+    <p><b>Email:</b></p>
+  </div>
+  <div class="footmap">
+    <iframe title="Bản đồ UBND phường Bình Hưng Hòa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=UBND%20Ph%C6%B0%E1%BB%9Dng%20B%C3%ACnh%20H%C6%B0ng%20H%C3%B2a&ll=10.7942262,106.6102041&z=17&output=embed"></iframe>
+    <a class="mapopen" href="https://maps.app.goo.gl/fXKRqFJzSaFKW8hG7" target="_blank" rel="noopener">Mở trong Maps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></a>
+  </div>
+</div></footer>
+
+<div class="modalWrap" id="modalWrap" onclick="if(event.target===this)closeModal()"><article class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modalhead"><button class="close" onclick="closeModal()" aria-label="Đóng">×</button><div class="eyebrow">CHI TIẾT THỦ TỤC HÀNH CHÍNH</div><h2 id="modalTitle"></h2><div id="modalTag"></div></div><div class="modalcontent" id="modalContent"></div><div class="modalbottom"><button class="btn" onclick="closeModal()">← Quay lại danh sách</button></div></article></div>
+<script type="module" src="/src/main.js"></script></body></html>

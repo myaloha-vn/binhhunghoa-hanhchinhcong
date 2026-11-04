@@ -1,0 +1,17 @@
+{
+  "name": "tthc-binh-hung-hoa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Trang tra cứu thủ tục hành chính - Trung tâm Hành chính công phường Bình Hưng Hòa",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "start": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview --open"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0",
+    "vite-plugin-singlefile": "^2.3.4"
+  }
+}
