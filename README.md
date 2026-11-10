@@ -16,7 +16,8 @@ Các lệnh khác:
 | Lệnh | Tác dụng |
 | --- | --- |
 | `npm run dev` / `npm start` | Chạy môi trường phát triển (tự tải lại khi sửa code) |
-| `npm run build` | Đóng gói bản chạy thật vào thư mục `dist/` |
+| `npm run build` | Đóng gói trang tra cứu thành 1 file `dist/index.html` |
+| `npm run build:admin` | Đóng gói trang quản trị thành 1 file `dist-admin/admin.html` |
 | `npm run preview` | Chạy thử bản đã đóng gói |
 
 ## Cấu trúc
@@ -24,12 +25,15 @@ Các lệnh khác:
 ```
 index.html        # bố cục trang
 src/main.js       # tìm kiếm, lọc theo cơ quan, phân trang
-src/data.js       # danh mục thủ tục (tên, cơ quan, mã TTHC, đường link)
+src/rows.js       # danh mục thủ tục gốc (tên, lĩnh vực, mã TTHC, link, nhóm, cơ quan)
+src/data.js       # nạp rows.js (hoặc bản chỉnh sửa từ trang quản trị)
+admin.html        # trang quản trị (src/admin.js, src/admin.css)
 src/style.css     # giao diện
 public/           # ảnh dùng chung (logo, hình toà nhà)
 ```
 
-## Cập nhật danh mục thủ tục
+## Trang quản trị
 
-Sửa file `src/data.js`. Mỗi dòng có dạng `[tên thủ tục, cơ quan, mã TTHC, đường link]`.
-Danh mục hiện tại theo bản niêm yết TTHC tiếp nhận và trả kết quả không phụ thuộc địa giới hành chính (29-10).
+Trang quản trị đang để trống (bản cũ lưu ở `backup/admin-v1/`). Mở `http://localhost:5173/admin.html` khi chạy `npm run dev`.
+Thêm / sửa / xóa thủ tục, nhập từ Excel, xuất Excel. Dữ liệu lưu trong trình duyệt;
+để đăng chính thức: tải `rows.js`, chép đè vào `src/rows.js`, chạy `npm run build`.

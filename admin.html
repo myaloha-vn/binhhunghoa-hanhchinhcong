@@ -1,0 +1,26 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Quản trị | Thủ tục hành chính phường Bình Hưng Hòa</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="app" class="app">
+  <aside class="side" id="side">
+    <div class="sbrand"><img src="/src/assets/logo.png" alt=""><div><strong>Hệ thống</strong><small>Quản trị nội dung</small></div></div>
+    <nav class="snav" id="snav"></nav>
+    <div class="sver">Phường Bình Hưng Hòa · v1.0.0</div>
+  </aside>
+  <div class="sback" id="sback" onclick="A.menu(false)"></div>
+  <div class="main">
+    <header class="top"><button class="burger" onclick="A.menu(true)" aria-label="Menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <h1 id="pageTitle"></h1>
+      <div class="topr"><a class="viewsite" href="/index.html" target="_blank" rel="noopener">Xem trang tra cứu ↗</a><div class="me"><span class="av">A</span><span class="mei"><b>Admin</b><small>Quản trị viên</small></span></div></div>
+    </header>
+    <div class="crumb" id="crumb"></div>
+    <div class="banner" id="banner" hidden></div>
+    <section class="content" id="content"></section>
+    <footer class="bfoot">© 2026 Trung tâm Hành chính công phường Bình Hưng Hòa</footer>
+  </div>
+</div>
+<div class="toasts" id="toasts"></div>
+<div class="mwrap" id="mwrap" onclick="if(event.target===this)A.closeModal()"><div class="mbox" id="mbox"></div></div>
+<input type="file" id="fileIn" accept=".xlsx,.xls,.csv" hidden>
+<script type="module" src="/src/admin.js"></script></body></html>
